@@ -4,9 +4,9 @@ import java.util.List;
 
 public class KthElement {
     public static void main(String[] args) {
-        findKthLargestAndSmallet(new int[]{1,9,0,10,15,2}, 2).forEach(e -> System.out.println(e));
+        findKthLargestAndSmallest(new int[]{1,9,0,10,15,2}, 2).forEach(e -> System.out.println(e));
     }
-    public static List<String> findKthLargestAndSmallet(int [] nums, int k){
+    public static List<String> findKthLargestAndSmallest(int [] nums, int k){
         List<String> result = new ArrayList<>();
         Arrays.sort(nums);
         if(k>=0 && k<nums.length){
