@@ -1,21 +1,16 @@
-function printPalindrome(string){
-    var flag = false;
-    var revStr = [];
-    for(let i = string.length-1; i>=0;i--){
-    revStr.push(string.charAt(i));
-    }
-    console.log(revStr);
+function isPalindrome(str) {
+    let elements = str.split("");
+    let rt = elements.length-1;
+    let lt = 0;
 
-    for(let i = 0; i<string.length;i++){
-        if(revStr[i] === string.charAt(i)){
-            flag = true;
+    while(lt < rt) {
+        if(!(elements[lt] === elements[rt])) {
+            return false;
         }
-        else{
-            flag = false;
-            return flag;
-        }
+        lt ++;
+        rt --;
     }
-    return flag;
+    return true;
 }
 
-console.log(printPalindrome("121"));
+console.log(isPalindrome("acbca"));
